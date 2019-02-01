@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>로그인 화면</h1>
+<form action="login">
+	아이디 입력 : <input type ="text" name ="id"></br>
+	암호 입력 : <input type ="password" name ="pw"></br>
+	
+	취미(복수개 선택가능) :
+			<Input name ="hobby" type="checkbox" value="자바" checked="checked"> 자바 
+			<Input name ="hobby" type="checkbox" value="하둡"> HADOOP 
+			<Input name ="hobby" type="checkbox" value="R" checked="checked"> R
+			<Input name ="hobby" type="checkbox" value="파이썬" > PYTHON 
+			
+	<input type ="submit" value ="로그인"></br>
+</form>
+
+<h1><a href ="login?id=oracle&pw=aaa">로그인 결과 출력</a></h1>
+</body>
+</html>

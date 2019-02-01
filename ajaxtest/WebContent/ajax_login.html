@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".general").on(
+						'click',
+						function() {
+							location.href = "ajax_login.jsp?id="
+									+ $("#id").val() + "&pw=" + $("#pw").val();
+						});
+
+				$(".ajax").on('click', function() {
+					requestAjax();
+				}); //general on end
+
+			}); // ready end
+
+	function requestAjax(){
+		$.ajax({ //ajax방식으로 요청할게
+			url : 'ajax_login.jsp', //jsp 파일 이름
+			type : 'POST', //보내는 방식 'POST' | 'GET'
+			data : {
+				'id' : $("#id").val(),
+				'pw' : $("#pw").val()
+			}, //post 방식이라 data에 쿼리 스트링을 넣어줌 형식  data : {'name1' : 'value1', 'name2' : 'value2'},  
+			success : function(server_output){ //서버에서 동작의 결과를 받아오는 함수 success를 오버라이딩을 사용함. 
+					
+				var jsonobj = JSON.parse(server_output);
+				if (jsonobj.auth) {
+					$("#here").html(jsonobj.time + "에 정상적으로 로그인하셨습니다. ");
+					$("#here").css('border','2px solid green');
+				} else{
+					$("#here").html("로그인 정보를 확인하세요.");
+				}
+			},
+			error : function() {
+				alert("error");
+			},
+			complete : function() {
+			}
+
+		})
+	}
+</script>
+</head>
+<body>
+	<form action="ajax_login.jsp">
+		아이디 입력 : <input type="text" id="id" name="id"></br> 암호 입력 : <input
+			type="password" name="pw" id="pw"></br> <input type="button"
+			class="general" value="로그인요청"></br> <input type="button"
+			class="ajax" value="ajax login 요청"></br>
+	</form>
+	<p1 id="here"> </p1>
+
+</body>
+</html>

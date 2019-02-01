@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type ="text/javascript">
+
+	var i=100;
+	var d = 3.14;
+	var c ="a";
+	var s  =' javascript';
+	var b= false;
+	var no;
+	var arr = [1,2,3,4,5];
+	var title=' oracle java project';
+	document.write(typeof arr + arr.length +"<br>");
+	document.write("title to upper"  + title.toUpperCase() +"<br>");
+	document.write("title change specific place word"+title.charAt(0) +"<br>");
+	if(title.charAt(0)=='o')
+	{
+		document.write("<style> body{color : red; }  </style> ");
+	}else 
+		document.write("<style> body{color : blue; }  </style> ");
+	var str1 = 100;
+	var str2 = "100";
+	document.write("compare value == "  + (str1 == str2) +"<br>");   /* true */
+	document.write("compare value === "  + (str1 === str2) +"<br>"); /* false */
+	
+	var mystu ={
+		id : 1000,
+		name : "홍길동",
+		toString : function(){
+			return this.id+"-" +this.name; 
+		}	
+	}; 
+	document
+	
+	document.write(typeof mystu + "<br>");
+	document.write(mystu+ "<br>");
+	
+</script>
+</head>
+<body>
+</body>
+</html>

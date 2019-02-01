@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title><!-- 
+<script src="../jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var value= $("#hear input[type=submit]").val();
+	if(value == '로그인')
+	{
+		$("#hear").html("<form action='../logoutsession' method ='get'>"+
+						"<input type ='submit' name ='logout' value ='로그아웃'></br>"+
+						"</form>")
+	}
+});
+</script> -->
+</head>
+<body>
+<h1>로그인 화면</h1>
+<h1 id ="hear">
+<form action="../loginsession" method ="post">
+	아이디 입력 : <input type ="text" name ="id"></br>
+	암호 입력 : <input type ="password" name ="pw"></br>
+	<input type ="submit" value ="로그인"></br>
+</form>
+</h1>
+
+</body>
+</html>

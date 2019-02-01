@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내 사이트의 게시판</title>
+<style type="text/css">
+	h1{
+		background-color : yellow; 
+		border : solid 3px blue; 
+		width : 300px;
+		margin : auto; 
+
+	}
+	table {
+		border : solid 1px aqua;
+		width : 400px;
+		margin : auto; 
+	}
+	td {
+	
+		border : solid 1px aqua; 
+		text-align : center; 
+	}
+	#write{
+		color :red; 
+	}
+	.green{
+		color : green; 
+	}
+	tr td :nth-of-type(2){
+		background-color: pink;
+	}
+</style>
+</head>
+<body>
+	<h1 >내 사이트의 게시판</h1>
+	<form action="#">
+		<select selected="제목" size="1">
+			<option>제목</option>
+			<option>내용</option>
+			<option>모두</option>
+		</select> <input type="text"> <input type="submit" value="검색버튼">
+	</form>
+	</br>
+	<table border =1>
+		<tr>
+			<td>게시물1</td>
+			<td><a href = "boarddetail.html">제목1</td>
+			<td>작성자1</td>
+			<td>조회수1</td>
+		</tr>
+		<tr>
+			<td>게시물2</td>
+			<td><a href = "boarddetail.html">제목2</td>
+			<td>작성자2</td>
+			<td>조회수2</td>
+		</tr>
+		<tr>
+			<td>게시물3</td>
+			<td><a href = "boarddetail.html">제목3</td>
+			<td>작성자3</td>
+			<td>조회수3</td>
+		</tr>
+		<tr>
+			<td>게시물4</td>
+			<td><a href = "boarddetail.html">제목4</td>
+			<td>작성자4</td>
+			<td>조회수4</td>
+		</tr>
+		<tr>
+			<td>게시물5</td>
+			<td><a href = "boarddetail.html">제목5</td>
+			<td>작성자5</td>
+			<td>조회수5</td>
+		</tr>
+			<tr>
+			<td>게시물1</td>
+			<td><a href = "boarddetail.html">제목1</td>
+			<td>작성자1</td>
+			<td>조회수1</td>
+		</tr>
+		<tr>
+			<td>게시물2</td>
+			<td><a href = "boarddetail.html">제목2</td>
+			<td>작성자2</td>
+			<td>조회수2</td>
+		</tr>
+		<tr>
+			<td>게시물3</td>
+			<td><a href = "boarddetail.html">제목3</td>
+			<td>작성자3</td>
+			<td>조회수3</td>
+		</tr>
+		<tr>
+			<td>게시물4</td>
+			<td><a href = "boarddetail.html">제목4</td>
+			<td>작성자4</td>
+			<td>조회수4</td>
+		</tr>
+		<tr>
+			<td>게시물5</td>
+			<td><a href = "boarddetail.html">제목5</td>
+			<td>작성자5</td>
+			<td>조회수5</td>
+		</tr>		
+	</table>
+	
+	<a href="boardwrite.html" id = "write"> 글쓰기</a>
+	</br>
+	<a href="#" class = "green">1</a>
+	<a href="#" class = "green">2</a>
+	<a href="#" class = "green">3</a>
+	<a href="#" class = "green">4</a>
+	
+</body>
+</html>

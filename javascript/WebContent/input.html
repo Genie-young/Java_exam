@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 	var id = prompt("input id");
+	 var result = confirm("over 20?");
+	 document.write(id+"<br>");
+	 result = 100; 
+	 document.write(result+"<br>"); 
+	 newVar = 100; 
+	 document.write(newVar+"<br>");	
+	 variable = function(){
+	 var local = "local";
+	 document.write(local +"<br>");
+	 global = "global";
+	 document.write(global +"<br>");
+	 }
+	 var arr1 = [10,'java'];
+	 variable();
+	 document.write(global +"<br>")
+	 var arr2 = new Array(10)	;
+	 arr1.unshift(100);
+	 document.write("</br>")
+	 for(var i =0; i<arr1.length;i++)
+	 document.write(arr1[i] +"--");
+	 document.write("</br>");
+	 document.write(arr1.join('--'));
+	 unshift(data) shift()  - 배열 첫번째 자리 지정, 삭제 ) 
+	 push(data) pop() - 배열 마지막 더하고 빼기 
+	 */
+	/* 	
+	 -> BOM 함수 
+	
+	 window.document.write(" html code")
+	 window.document.getElementById("i")
+	 window.navigator.userAgent()  브라우저 이름 받아옴
+	 window.location.href = "주소 내용을 바꿈"
+	
+	 => 윈도우 안의 함수 
+	 setTimeout
+	 setInterval
+	 parseInt(3.14)
+	
+	 => DOM html태그들을 객체로 만든 것 
+	 var aa = document.getElementById("a") id가 a인 태그 전체를 가져옴 
+	 aa.innerHTML  ->태그 안의 내용 가져옴 
+	 input 태그의 경우 type 을 알고싶으면 다음 명령을 사용
+	 bb.type 
+	 bb.value  입력받은 값 구하기 
+	
+	 이벤트 : 마우스 클릭, 키보드 입력 = 이벤트 발생
+	 이벤트 종류 : 클릭 이벤트, keypressed, submit 이벤트, load  
+	 window.onload => body 가 로딩될 때까지 기다려 
+	
+	 이벤트 발생시 
+	 버튼 dom객체.on 이벤트 종류 중의 이름  on은 ~할때로 해석
+	 on 이벤트 할 때 function 실행
+	 // function 은 이벤트 핸들러 함수라고 함. 
+	 ex) window.onload = function() {} 
+	 btn.onclick =  function() {} 
+	 id.onkeypressed 
+	 sub.onsubmit
+	
+	 */
+
+	window.onload = function() {
+		var id = document.getElementById("id");
+		var pw1 = document.getElementById("pw1");
+		var pw2 = document.getElementById("pw2");
+		var result = document.getElementById("result");
+		var login = document.getElementById("btn");
+
+		login.onclick = function() {
+			for (var i = 0; i < idlist.length; i++) {
+				if (idlist[i] == id.value) // id를찾으면 
+				{
+					if (pw1.value == pw2.value)
+						inform = "정상 사용자";
+					else
+						inform = "암호확인필요";
+					break;
+				} else{
+					inform = "아이디리스트에 없습니다.";
+				}
+				
+			}
+			result.innerHTML = inform; 
+		}
+
+	}
+</script>
+</head>
+<body>
+
+	<form>
+		아이디 입력 : <input type="text" id="id" value="aaa"></br>
+		 암호입력 : <input type="password"> </br> 
+		 압호입력 확인 : <input type="password"> </br>
+		 <input type = "button " value = "로그인" id = "btn">  </br> 
+	</form>
+</body>
+</html>
+
+

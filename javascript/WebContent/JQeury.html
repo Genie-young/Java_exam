@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+
+<style type="text/css">
+.jquerycls {
+	background-color: gray;
+}
+</style>
+
+<script src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() { // $(자바스크립트객체).함수(); 
+
+/* 		$("#first").hide(3000, function(){  //슬라이드 업앤다운 효과
+			$("#output").html("숨기기 완료");			
+		});
+		$("#first").show(3000, function(){
+			$("#output").html("보이기 완료");			
+		}); */
+/* 		$("#first").fadeOut(3000, function(){  //연해지다 사라짐. 
+			$("#output").html("숨기기 완료");			
+		});
+		$("#first").fadeIn(3000, function(){
+			$("#output").html("보이기 완료");			
+		});  */
+		/* 	$("#first").toggle(3000, function(){
+				
+				$("#output").html("숨기기 완료");			
+			}); */
+/* 		
+			$("input[value=감추기]").on('click',function(){
+				$("#first").fadeOut(3000, function(){
+					$("#output").html("숨기기 완료");})
+				})
+			$("input[value=보이기]").on('click',function(){
+					$("#first").fadeIn(2000, function(){
+						$("#output").html("보이기 완료");	
+				})});
+	}); */
+	var cnt = 0; 
+	$('input[type=text]').on('keyup',function(){
+		$("#output").html( $('input[type=text]').val());
+		cnt++;
+		if(cnt>10){
+			$("#output").html("~~고만");
+			$("input[type=text]").attr("readonly", "readonly");
+		}
+
+	});
+	$("input[value=입력중단]").on("click", function(){
+		$('input[type=text]').off('keyup'); 
+	});
+	
+	$('input[type=text]').click(); 
+	
+});
+</script>
+
+</head>
+
+<body>
+	<h1 id="first">JQuery 연습</h1>
+	<h1>
+		<a class="green" href="htto://www.daum.net"> 링크 동작 테스트 태그</a></br>
+	</h1>
+	<input type="text" value="텍스트입력">
+	<input type="button" value="입력중단">
+	</br>
+	<input type="password" value="암호입력">
+	</br>
+	<input type="button" value="감추기">
+	</br>
+	<input type="button" value="보이기">
+	</br>
+
+	<h1>점심메뉴는</h1>
+	<select>
+		<option>한식</option>
+		<option selected="selected">분식</option>
+		<option>중식</option>
+		<option>양식</option>
+		<option>맛점</option>
+	</select>
+
+	<h1 id="output"></h1>
+</body>
+
+</html>
